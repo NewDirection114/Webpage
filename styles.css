@@ -1164,7 +1164,6 @@ button {
     height: 150px; /* 設定固定高度 */
     object-fit: contain; /* 確保圖片內容完整顯示 */
     margin-top: 1rem;
-    border: 1px solid red; /* 添加邊框以方便調試 */
     background-color: lightgray; /* 添加背景色以方便調試 */
     display: block; /* 確保為區塊元素 */
 }
@@ -1339,7 +1338,7 @@ button {
 }
 
 .philippines-schools {
-    margin-bottom: 50px;
+    margin-bottom: 8px;
 }
 
 .school-grid {
@@ -1702,8 +1701,8 @@ button {
 }
 
 .requirement-item img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 1rem;
 }
 
