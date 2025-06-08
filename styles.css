@@ -21,6 +21,11 @@ body {
     background-color: var(--background-color);
 }
 
+/* 所有頁面主要內容區塊的通用頂部間距，以避免被固定導航欄遮擋 */
+section:not(.hero) {
+    padding-top: 12rem; /* 再次增加 padding-top，確保標題顯示 */
+}
+
 /* 導航欄樣式 */
 .navbar {
     position: fixed;
@@ -344,7 +349,7 @@ body {
 
 /* 聯絡區域樣式 */
 .contact {
-    padding: 5rem 2rem;
+    padding: 8rem 2rem;
     background: #eaf6fb;
     color: var(--primary-color);
 }
@@ -1129,8 +1134,13 @@ button {
 }
 
 .qr-code {
-    max-width: 150px;
+    width: 150px; /* 設定固定寬度 */
+    height: 150px; /* 設定固定高度 */
+    object-fit: contain; /* 確保圖片內容完整顯示 */
     margin-top: 1rem;
+    border: 1px solid red; /* 添加邊框以方便調試 */
+    background-color: lightgray; /* 添加背景色以方便調試 */
+    display: block; /* 確保為區塊元素 */
 }
 
 .contact-form-container {
@@ -1703,82 +1713,86 @@ button {
 
 /* 合作夥伴區塊 */
 .partners-section {
-    padding: 4rem 0;
+    padding: 5rem 2rem;
     background: var(--section-bg);
 }
 
 .partners-section h2 {
-    text-align: center;
     font-size: 2.2rem;
     font-weight: 700;
+    letter-spacing: 1.5px;
     color: var(--primary-color);
     margin-bottom: 3rem;
+    text-align: center;
     text-shadow: 0 4px 16px rgba(44,62,80,0.28), 0 2px 8px rgba(44,62,80,0.18);
 }
 
 .partners-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
-    padding: 0 2rem;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .partner-item {
     background: white;
     padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(44,62,80,0.28), 0 2px 8px rgba(44,62,80,0.18);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 150px;
 }
 
 .partner-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(44,62,80,0.35), 0 4px 12px rgba(44,62,80,0.25);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .partner-item img {
     max-width: 100%;
-    height: auto;
-    max-height: 80px;
+    max-height: 100%;
     object-fit: contain;
+    display: block;
 }
 
 @media (max-width: 1200px) {
     .partners-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
 }
 
 @media (max-width: 992px) {
     .partners-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
 }
 
 @media (max-width: 768px) {
     .partners-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
         gap: 1.5rem;
-        padding: 0 1rem;
     }
-
+    
     .partner-item {
+        height: 120px;
         padding: 1rem;
-    }
-
-    .partner-item img {
-        max-height: 60px;
     }
 }
 
 @media (max-width: 480px) {
     .partners-grid {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+    }
+    
+    .partner-item {
+        height: 100px;
+        padding: 0.8rem;
     }
 }
 
@@ -1842,4 +1856,21 @@ button {
 
 #articles .read-more:hover {
     background: var(--secondary-color);
+}
+
+.contact-page {
+    padding-top: 5rem; /* 恢復原來的 padding-top */
+    padding-bottom: 5rem;
+    background: var(--section-bg);
+}
+
+.contact-page h1 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 0 4px 16px rgba(44,62,80,0.28), 0 2px 8px rgba(44,62,80,0.18);
 } 
