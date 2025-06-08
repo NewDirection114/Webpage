@@ -638,9 +638,29 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .about-content {
-        flex-direction: column;
-        text-align: center;
+    .about-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 1.5rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .about-image {
+        margin-bottom: 1rem !important;
+        width: 100% !important;
+    }
+
+    .about-text {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 0 1rem !important;
+        box-sizing: border-box !important;
+        display: block !important;
     }
 
     .profile-image {
@@ -670,6 +690,12 @@ footer {
 
     .social-links {
         justify-content: center;
+    }
+
+    #articles .article-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        padding: 0 1rem !important;
     }
 }
 
