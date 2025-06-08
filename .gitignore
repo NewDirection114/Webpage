@@ -1,0 +1,28 @@
+# macOS 系統檔案
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 編輯器設定檔
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 暫存檔案
+*.log
+*.tmp
+*.temp
+
+# 環境設定檔
+.env
+.env.local
+.env.*.local
+
+# 相依套件目錄
+node_modules/
+vendor/
+
+# 建置輸出目錄
+dist/
+build/ 
