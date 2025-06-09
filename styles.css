@@ -697,6 +697,24 @@ footer {
         gap: 1.5rem !important;
         padding: 0 1rem !important;
     }
+
+    .about {
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+    }
+    .about-content {
+        margin-top: 2rem;
+        gap: 2.5rem !important;
+    }
+    .about-text {
+        padding: 0 2rem !important;
+        line-height: 2 !important;
+        font-size: 1.1rem !important;
+        text-align: left !important;
+    }
+    .profile-image {
+        margin-bottom: 1.5rem !important;
+    }
 }
 
 /* 橫向手機樣式 */
