@@ -1215,12 +1215,11 @@ button {
 }
 
 .qr-code {
-    width: 150px; /* 設定固定寬度 */
-    height: 150px; /* 設定固定高度 */
-    object-fit: contain; /* 確保圖片內容完整顯示 */
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
     margin-top: 1rem;
-    background-color: lightgray; /* 添加背景色以方便調試 */
-    display: block; /* 確保為區塊元素 */
+    display: block;
 }
 
 .contact-form-container {
@@ -2010,4 +2009,15 @@ button {
     display: block;
     margin: 0;
     padding: 0;
+}
+
+.contact-method .qr-code {
+    border: none !important;
+}
+.contact-method .qr-code {
+    display: block;
+    margin-bottom: 0;
+}
+.contact-method.flex-1 {
+    border-bottom: none !important;
 } 
