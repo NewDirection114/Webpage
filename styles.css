@@ -2020,4 +2020,36 @@ button {
 }
 .contact-method.flex-1 {
     border-bottom: none !important;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1.5rem !important;
+        margin-top: 1.5rem !important;
+    }
+    .about-image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .profile-image {
+        width: 160px !important;
+        height: 160px !important;
+        margin: 0 auto 1rem auto !important;
+        display: block;
+    }
+    .about-text {
+        padding: 0 1rem !important;
+        font-size: 1.08rem !important;
+        line-height: 2 !important;
+        text-align: left !important;
+        max-width: 100%;
+    }
+    .about-text p, .about-text .highlight-text {
+        margin-bottom: 1.3em !important;
+        word-break: break-word !important;
+    }
 } 
