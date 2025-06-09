@@ -739,6 +739,10 @@ footer {
         margin-bottom: 1.1em !important;
         word-break: break-word !important;
     }
+
+    section:not(.hero) {
+        padding-top: 5.5rem !important;
+    }
 }
 
 /* 橫向手機樣式 */
